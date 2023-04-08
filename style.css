@@ -16,9 +16,8 @@
 .content {
   display: none;
 }
-.content {
-  margin-top: 80px; /* To push down the content below the fixed navbar */
-  height: 500px; /* Just for demonstration purposes */
+.container {
+  margin-top: 55px; /* To push down the content below the fixed navbar */
 }
 
 .content.active {
