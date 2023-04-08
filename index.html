@@ -1,30 +1,159 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">My Portfolio</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <header class="bg-dark text-white py-5">
-      <
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Portfolio</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">My Portfolio</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" href="#" data-target="#portfolio" onclick="toggleDiv(event)">
+						Home
+						<span class="sr-only">
+							(current)
+						</span>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" data-target="#about" onclick="toggleDiv(event)">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" data-target="#contact" onclick="toggleDiv(event)">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div id="portfolio" class="d-flex justify-content-center align-items-center">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+				<li data-target="#myCarousel" data-slide-to="4"></li>
+				<li data-target="#myCarousel" data-slide-to="5"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item mx-auto carousel-img active">
+					<a href="https://www.intelbras.com/pt-br/roteador-5g-gx-3000">
+						<img class="d-block w-100" src="images/gx3000.png" alt="First slide">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>Intelbras Router 5G Wifi 6.0</h5>
+							<p>Embedded linux router application that uses the most recent
+								technologies relates to wireless, such as 5G, Mesh, and WiFi 6.0.</p>
+						</div>
+					</a>
+				</div>
+				<div class="carousel-item mx-auto carousel-img">
+					<a href="https://sagatechbrasil.com.br/hidrometrocomradio/">
+						<img class="d-block w-100 carousel-img" src="images/pulseCounter.png" alt="Second slide">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>Pulse Counter LORA/NB-IoT</h5>
+							<p class="text-center">Embedded equipment that collects pulses and transmits the data by
+								NB-IoT
+								or Lora technology.</p>
+						</div>
+					</a>
+				</div>
+				<div class="carousel-item mx-auto carousel-img">
+					<a href="https://www.fae.com.br/hidrometros-ultrassonicos/">
+						<img class="d-block w-100 carousel-img" src="images/fluxus.png" alt="Third slide">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>Ultrasonic Water Meter</h5>
+							<p>Embedded equipment that collects data from water meters to send
+								remotely by WMBUS technology. Also detects alarms and frauds.</p>
+						</div>
+					</a>
+				</div>
+				<div class="carousel-item mx-auto carousel-img">
+					<a href="https://www.fae.com.br/">
+						<img class="d-block w-100 carousel-img" src="images/hydra.png" alt="Fourth slide">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>Remote Unit Transmissor</h5>
+							<p>Embedded equipment that collects data from water meters to send
+								remotely by WMBUS technology. Also detects alarms and frauds.</p>
+						</div>
+					</a>
+				</div>
+				<div class="carousel-item mx-auto carousel-img">
+					<a href="https://www.fae.com.br/">
+						<img class="d-block w-100 carousel-img" src="images/receiver.png" alt="Hydra Receiver">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>Remote Unit Receiver</h5>
+							<p>Embedded equipment that collects data by WMBUS protocol from other remote unit
+								transmitters.</p>
+						</div>
+					</a>
+				</div>
+				<div class="carousel-item mx-auto carousel-img">
+					<a href="https://www.hidracor.com.br/simulador-de-ambientes/">
+						<img class="d-block w-100 carousel-img" src="images/hidracor.png" alt="Hydra Receiver">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>Environment Color Simulator</h5>
+							<p>A front-end application that allows users to visualize different
+								color options for indoor rooms or houses before actually painting them.</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	<div id="about" style="display: none;">
+		<div class="container py-5">
+			<div class="row justify-content-center">
+			  <div class="col-md-8">
+				<h2 class="text-center mb-5">Summary</h2>
+				<p class="lead">I have had the opportunity to work as a product analyst and specialist in the research and development department of an industrial manufacturing company, where I gained valuable experience analyzing and evaluating products, as well as developing and implementing new products. Through this role, I gained a deep understanding of the product development process and learned to work collaboratively with cross-functional teams.</p>
+				<p class="lead">With over six years of experience, I have designed, developed, debugged, and tested various embedded system applications, specializing in bare-metal embedded design and wireless technologies such as LORA, NB-IoT, and Bluetooth. Throughout my career, I have participated in the development of more than four products in the embedded utilities area.</p>
+				<p class="lead">I have a certificate in Introduction to Self-Driving Cars, which has allowed me to gain knowledge and skills in image processing using programming languages such as Python and C++ and frameworks like OpenCV.</p>
+				<p class="lead">Additionally, I have gained over a year of experience as a DevOps in a web network management application, allowing me to hone my skills in both back-end and front-end development. Through this experience, I gained valuable insights into the software development lifecycle and learned to work effectively in a fast-paced, collaborative environment.</p>
+				<p class="lead">As a freelancer, I developed a front-end application utilizing pure JavaScript and JQuery for image processing, gaining experience in web technologies such as React, HTML, and CSS. My experience also includes data analysis and browser test automation, further strengthening my proficiency in software development. I am committed to staying up-to-date with the latest advancements in web technologies and continuously improving my skills as a developer.</p>
+				<p class="lead">I invite you to visit my <a href="https://www.linkedin.com/in/your-linkedin-profile/">LinkedIn</a> and <a href="https://github.com/your-github-profile">GitHub</a> pages for further details. On these platforms, you can find a collection of projects that showcase my skills and experience in software development. I am confident that these projects will provide further insight into my capabilities and passion for creating innovative solutions.</p>
+			  </div>
+			</div>
+		  </div>
+	</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+<script>
+	function toggleDiv(event) {
+		// Get the target div ID from the data-target attribute
+		const targetDivId = event.target.getAttribute('data-target');
+		// Get the target div element by its ID
+		const targetDiv = document.querySelector(targetDivId);
+		// Toggle the target div's display property
+		targetDiv.style.display = (targetDiv.style.display === 'none') ? 'block' : 'none';
+	}
+</script>
+
+</html>

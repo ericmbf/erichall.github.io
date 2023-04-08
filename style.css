@@ -1,0 +1,14 @@
+.carousel-item img {
+  max-width: 1000px;
+  max-height: 1000px;
+  /* width: 854px; */
+  /* height: 480px; */
+}
+
+.carousel h5 {
+  color: #444444;
+}
+
+.carousel p {
+  color: #444444;
+}
