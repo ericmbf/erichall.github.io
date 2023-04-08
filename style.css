@@ -12,3 +12,25 @@
 .carousel p {
   color: #444444;
 }
+
+.content {
+  display: none;
+}
+.content {
+  margin-top: 80px; /* To push down the content below the fixed navbar */
+  height: 500px; /* Just for demonstration purposes */
+}
+
+.content.active {
+  display: block;
+}
+
+.bottom-div {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+.bottom-div p {
+  margin-bottom: 5px;
+}
